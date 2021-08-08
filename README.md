@@ -12,5 +12,5 @@ the following items has been used:
 Screen shot of the designed ui :
 
 [
-![image](https://user-images.githubusercontent.com/72321097/128647620-e1e600c5-dba8-4bc8-b4a6-e876a6415740.png)
+![image](https://user-images.githubusercontent.com/72321097/128647983-96700914-9fa3-4194-93b8-b43865882772.png)
 ](url)
