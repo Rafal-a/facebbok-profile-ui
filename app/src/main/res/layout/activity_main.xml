@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/cover_image"
-        android:layout_marginTop="-122dp"
+        android:layout_marginTop="-135dp"
         android:background="@drawable/profile_shape"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/cover_image"
@@ -115,6 +115,8 @@
             android:layout_margin="10dp"
             android:background="@drawable/user_info_contact"
             android:elevation="25dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="@+id/profile_photo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.159"
@@ -172,11 +174,13 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
             android:background="@drawable/user_info_contact_background"
             android:elevation="25dp"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/id_text_message"
-            tools:layout_editor_absoluteX="0dp">
+            >
 
             <TextView
                 android:id="@+id/id_text_timeline"
@@ -327,10 +331,12 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/ic_picture_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.868"
+                app:layout_constraintHorizontal_bias="0.882"
                 app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="@+id/textView" />
+                app:layout_constraintTop_toTopOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.06" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/id_coffee_photo"
@@ -371,6 +377,7 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/amestrdam_photo"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/id_coffee_photo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.42"
@@ -410,13 +417,23 @@
                 android:id="@+id/id_seeMore_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/see_more"
-                android:textColor="@color/black"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/id_seeMore_text"
+                app:layout_constraintStart_toStartOf="@+id/id_seeMore_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -439,6 +456,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/friends_layout"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.047"
                 app:layout_constraintStart_toStartOf="parent"
@@ -448,7 +466,7 @@
                 android:id="@+id/friends_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="530"
+                android:text="@string/friends_number"
                 app:layout_constraintBottom_toBottomOf="@+id/id_friends"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.04"
@@ -460,11 +478,15 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
+                android:layout_marginEnd="12dp"
                 android:src="@drawable/ic_friends_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.868"
+                app:layout_constraintHorizontal_bias="0.96"
                 app:layout_constraintStart_toEndOf="@+id/friends_number"
-                app:layout_constraintTop_toTopOf="@+id/friends_number" />
+                app:layout_constraintTop_toBottomOf="@+id/friends_number"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.06" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/id_carter_white"
@@ -566,8 +588,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="128dp"
-                android:text="3 mutual friends"
-                android:textSize="10sp"
+                android:text="@string/mutual_friends_3"
+                android:textSize="@dimen/text_dimensions"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.345"
                 app:layout_constraintStart_toStartOf="parent"

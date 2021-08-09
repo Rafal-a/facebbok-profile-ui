@@ -18,4 +18,6 @@
     <string name="ashley_ren"><b>Ashley Ren</b></string>
     <string name="alex_lopez"><b>Alex Lopez</b></string>
     <string name="maggie_morphy"><b>Maggie Morphy</b></string>
+    <string name="friends_number">530</string>
+    <string name="mutual_friends_3">3 mutual friends</string>
 </resources>
